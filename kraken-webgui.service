@@ -1,0 +1,16 @@
+[Unit]
+Description=Kraken Market Data Web GUI
+After=network.target
+
+[Service]
+Type=simple
+User=USER_PLACEHOLDER
+Group=USER_PLACEHOLDER
+WorkingDirectory=WORKDIR_PLACEHOLDER
+ExecStart=/usr/bin/python3 WORKDIR_PLACEHOLDER/web_server.py
+Restart=always
+RestartSec=5
+Environment="HOME=/home/USER_PLACEHOLDER"
+
+[Install]
+WantedBy=multi-user.target

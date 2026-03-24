@@ -1,0 +1,12 @@
+[Unit]
+Description=Kraken Market Data Analyzer
+After=network.target kraken-collector.service
+
+[Service]
+Type=oneshot
+User=USER_PLACEHOLDER
+WorkingDirectory=WORKDIR_PLACEHOLDER
+ExecStart=/usr/bin/python3 WORKDIR_PLACEHOLDER/analyzer.py
+
+[Install]
+WantedBy=multi-user.target

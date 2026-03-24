@@ -1,0 +1,14 @@
+[Unit]
+Description=Kraken Market Data Collector
+After=network.target
+
+[Service]
+Type=simple
+User=USER_PLACEHOLDER
+WorkingDirectory=WORKDIR_PLACEHOLDER
+ExecStart=/usr/bin/python3 WORKDIR_PLACEHOLDER/collector.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Kraken X/Twitter News Collector
+After=network.target
+
+[Service]
+Type=oneshot
+User=USER_PLACEHOLDER
+WorkingDirectory=WORKDIR_PLACEHOLDER
+ExecStart=/usr/bin/python3 WORKDIR_PLACEHOLDER/news_collector_x.py
+
+[Install]
+WantedBy=multi-user.target
